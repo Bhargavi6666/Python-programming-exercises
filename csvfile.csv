@@ -1,0 +1,48 @@
+import csv
+'''with open("names.py") as csv_file:
+    csv_reader = csv.reader(csv_file)
+    #print(*csv_reader)
+#----for printing the names from 2nd line
+#next(csv_reader)
+#----------
+    with open("new_names.text","w") as new_file:
+        csv_writter = csv.writer(new_file,delimiter = ".")
+        for line in csv_reader:
+            csv_writter.writerow(line)
+            print(line)'''
+#---using dictreader------
+'''with open("csv2.csv","r") as file:
+    csv_reader= csv.DictReader(file)
+    for line in csv_reader:
+        print(line)'''
+#-----using Dictwriter----
+'''with open("names.py","r")as file:
+    csv_reader = csv.reader("file")
+    with open("new_names.csv","w") as intial_file:
+        fieldnames =["first","secondname","emails"]
+        csv_writter = csv.DictWriter(intial_file,fieldnames = fieldnames,delimiter="*")
+        csv_writter.writeheader()
+        for line in csv_reader:
+            csv_writter.writerow(line)'''
+#------practice of csv in ditionary format---
+with open("csv2.csv","r") as file:
+    reader = csv.DictReader(file)
+    for i in reader:
+        print(dict(i))
+#details =[dict(row) for row in reader]
+#print(details)
+    '''for user_details in  details:
+        if float(user_details['score'])>=80:
+            details["grade"]="A"
+        else:
+            details["grade"]="F"
+        user_details.pop("score")
+        
+            
+    with open("python/csv2.csv","w") as file:
+        fieldnames=["name","mbl-no","email","grade"]
+        writer = csv.DictWriter(file,fieldnames=fieldnames)
+        writer.writeheader()
+        print(details)'''
+#writer.writerows(details)
+#print(details)
